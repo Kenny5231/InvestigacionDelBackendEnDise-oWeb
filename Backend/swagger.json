@@ -1,0 +1,16 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/auth/register": {
+      "post": {
+        "summary": "Registro",
+        "tags": ["Auth"],
+        "requestBody": { "content": { "application/json": { "schema": { "$ref": "#/components/schemas/User" } } } },
+        "responses": { "200": { "description": "Usuario creado" } }
+      }
+    }
+  },
+  "components": {
+    "schemas": { "User": { "type": "object", "properties": { "username": { "type": "string" }, "password": { "type": "string" } } } }
+  }
+}
